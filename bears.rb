@@ -15,6 +15,10 @@ class Bears
   return count_fish_in_stomach
   end
 
-
+  def roar
+    if count_fish_in_stomach > 0
+      return "Rooaar!"
+    end
+  end
 
 end
