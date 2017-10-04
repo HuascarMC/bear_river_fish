@@ -7,7 +7,7 @@ class River
   end
 
   def remove_fish_from_river(fish)
-    @fishes.remove_fish_from_river(fish)
+    @fishes.delete(fish)
     return @fishes.count
   end
 
