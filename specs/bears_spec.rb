@@ -28,8 +28,10 @@ class TestBears < MiniTest::Test
   assert_equal(2, @amazon.fish_count)
   end
 
-  def test_bear_roar
-    assert_nil(@bear.roar)
+  def roar
+    if count_fish_in_stomach > 0
+      return "Rooaar!"
+    end
   end
 
 end
