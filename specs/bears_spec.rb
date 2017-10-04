@@ -19,4 +19,13 @@ class TestBears < MiniTest::Test
   def test_name
     assert_equal("Yogi", @bear.name)
   end
+
+  def test_bear_takes_fish
+  @bear.takes_fish(@trout)
+  @amazon.remove_fish_from_river(@trout)
+
+  assert_equal(1, @bear.count_fish_in_stomach)
+  assert_equal(2, @amazon.fish_count)
+  end
+
 end
