@@ -18,4 +18,9 @@ class TestRiver < MiniTest::Test
     assert_equal("Amazon", @amazon.name)
   end
 
+  def test_fishes
+  assert_equal(@fishes, @amazon.fishes)
+  end
+
+
 end
