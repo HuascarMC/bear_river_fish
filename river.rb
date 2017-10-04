@@ -6,8 +6,9 @@ class River
     @fishes = fishes
   end
 
-  def test_remove_fish_from_river
-    assert_equal(2, @amazon.remove_fish_from_river(@pike))
+  def remove_fish_from_river(fish)
+    @fishes.remove_fish_from_river(fish)
+    return @fishes.count
   end
 
   def fish_count
