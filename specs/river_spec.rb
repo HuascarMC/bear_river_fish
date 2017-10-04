@@ -1,11 +1,17 @@
 require_relative('../river.rb')
+require_relative('../fish.rb')
+require_relative('../bears.rb')
 require('minitest/autorun')
 require('minitest/rg')
 
 class TestRiver < MiniTest::Test
 
   def setup
-    @amazon = River.new("Amazon")
+    @trout = Fish.new("Paul")
+    @pike = Fish.new("Nemo")
+    @salmon = Fish.new("Margaret")
+    @fishes = [@trout, @pike, @salmon]
+    @amazon = River.new("Amazon", @fishes)
   end
 
   def test_name

@@ -1,13 +1,15 @@
-require_relative('../bears.rb')
+require_relative('../fish.rb')
 require('minitest/autorun')
 require('minitest/rg')
 
-class TestFish
+class TestFish < MiniTest::Test
   def setup
-    @fish = Fish.new("Paul")
+    @trout = Fish.new("Paul")
+    @pike = Fish.new("Nemo")
+    @salmon = Fish.new("Margaret")
   end
 
   def test_name
-    assert_equal("Paul", @fish.name)
+    assert_equal("Nemo", @pike.name)
   end
 end
