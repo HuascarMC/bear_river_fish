@@ -6,6 +6,9 @@ class Bears
     @stomach = []
   end
 
+  def count_fish_in_stomach
+  return @stomach.length
+  end
 
 
 
