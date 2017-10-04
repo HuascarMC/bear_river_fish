@@ -26,4 +26,9 @@ class TestRiver < MiniTest::Test
   assert_equal(0, @bear.count_fish_in_stomach)
   end
 
+  def remove_fish_from_river(fish)
+    @fishes.delete(fish)
+    return @fishes.count
+  end
+
 end
